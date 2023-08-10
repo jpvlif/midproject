@@ -42,3 +42,38 @@ function tocaSomTom(){
     document.querySelector('#som_tecla_tom').play();
 }
 document.querySelector('.tecla_tom').onclick = tocaSomTom;
+
+//Adicionar o evento de tecla
+document.addEventListener("keydown", function(event){
+//Mostra qual tecla foi acionada no evento
+console.log(event.key)
+
+//Verificando botao especifico
+if(event.key==="q"){
+    tocaSomPom();
+}
+if(event.key==="w"||event.key==="Q"){
+    tocaSomClap();
+}
+if(event.key==="e"){
+    tocaSomTim();
+}
+if(event.key==="a"){
+    tocaSomPuff();
+}
+if(event.key==="s"){
+    tocaSomSplash();
+}
+if(event.key==="d"){
+    tocaSomToim();
+}
+if(event.key==="z"){
+    tocaSomPsh();
+}
+if(event.key==="x"){
+    tocaSomTic();
+}
+if(event.key==="c"){
+    tocaSomTom();
+}
+});
