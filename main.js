@@ -44,36 +44,43 @@ function tocaSomTom(){
 document.querySelector('.tecla_tom').onclick = tocaSomTom;
 
 //Adicionar o evento de tecla
+
+let tecla = null;
+
 document.addEventListener("keydown", function(event){
 //Mostra qual tecla foi acionada no evento
 console.log(event.key)
 
+
+tecla = event.key;
+tecla = tecla.toLowerCase();
+
 //Verificando botao especifico
-if(event.key==="q"){
+if(tecla==="q"){
     tocaSomPom();
 }
-if(event.key==="w"||event.key==="Q"){
+if(tecla==="w"){
     tocaSomClap();
 }
-if(event.key==="e"){
+if(tecla==="e"){
     tocaSomTim();
 }
-if(event.key==="a"){
+if(tecla==="a"){
     tocaSomPuff();
 }
-if(event.key==="s"){
+if(tecla==="s"){
     tocaSomSplash();
 }
-if(event.key==="d"){
+if(tecla==="d"){
     tocaSomToim();
 }
-if(event.key==="z"){
+if(tecla==="z"){
     tocaSomPsh();
 }
-if(event.key==="x"){
+if(tecla==="x"){
     tocaSomTic();
 }
-if(event.key==="c"){
+if(tecla==="c"){
     tocaSomTom();
 }
 });
